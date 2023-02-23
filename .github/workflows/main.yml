@@ -1,1 +1,21 @@
+name: Run Ansible Playbook
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-ansible-playbook:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run Ansible Playbook
+      uses: ahmadnassri/action-ansible-playbook@v2
+      with:
+        playbook: playbook.yml
+        inventory: inventory.ini
+        requirements: requirements.yml
+        extras: '--extra-vars "var1=value1 var2=value2"'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
