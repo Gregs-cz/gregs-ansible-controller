@@ -1,0 +1,9 @@
+- name: Backup Mikrotik Configuration
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Execute Mikrotik Backup
+    mikrotik_command:
+      commands:
+        - "/export file=backup"
+      provider: "{{ mikrotik }}"
