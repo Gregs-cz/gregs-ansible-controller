@@ -1,9 +1,14 @@
-- name: Backup Mikrotik Configuration
-  hosts: all
+- name: Check Mikrotik RouterOS Version
+  hosts: 13.80.54.130
   gather_facts: no
-  tasks:
-  - name: Execute Mikrotik Backup
-    mikrotik_command:
-      commands:
-        - "/export file=backup"
-      provider: "{{ mikrotik }}"
+  become: yes
+
+  roles:
+    - name: Check RouterOS Version
+      raw: /system package print
+      register: routeros_version
+
+    - name: Print RouterOS Version
+      debug:
+        var: routeros_version.stdout_lines
+
