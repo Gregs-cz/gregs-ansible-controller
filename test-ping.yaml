@@ -1,5 +1,5 @@
 ---
-- hosts: 77.75.77.222
+- hosts: test-ping-inventories
   tasks:
-    - name: Připojení k hostiteli pomocí ping
+    - name: ping-test
       ping:
