@@ -1,0 +1,5 @@
+---
+- hosts: all
+  tasks:
+    - name: Připojení k hostiteli pomocí ping
+      ping:
