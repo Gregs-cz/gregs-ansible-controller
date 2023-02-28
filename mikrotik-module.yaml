@@ -1,0 +1,4 @@
+- name: Instalace knihovny ansible-mikrotik
+  community.general.collection_install:
+    name: ansible.netcommon
+    version: 2.4.0
