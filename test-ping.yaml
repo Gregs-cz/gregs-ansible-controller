@@ -4,5 +4,4 @@
 
   tasks:
     - name: ping-test
-      ansible.netcommon.net_ping:
-      dest: 13.80.54.130
+      ping:
