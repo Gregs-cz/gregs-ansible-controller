@@ -3,5 +3,5 @@
   hosts: test-ping
 
   tasks:
-    - name: ping-test
+    - name: test-ping
       ping:
