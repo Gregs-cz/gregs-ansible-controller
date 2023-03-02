@@ -1,7 +1,4 @@
 ---
-- name: test-ping
-  hosts: test-ping
-
-  tasks:
-    - name: test-ping
-      ping:
+- name: Test runcommand
+  community.routeros.command:
+    commands: /system routerboard print
