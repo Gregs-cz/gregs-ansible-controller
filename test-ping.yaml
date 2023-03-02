@@ -1,4 +1,4 @@
 ---
 - name: Test runcommand
   community.routeros.command:
-    commands: /system routerboard print
+    commands: /system resource print
