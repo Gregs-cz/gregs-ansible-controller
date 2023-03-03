@@ -1,4 +1,3 @@
----
-- name: Test runcommand
+- name: Run command on remote devices
   community.routeros.command:
     commands: /system resource print
