@@ -1,6 +1,6 @@
 - name: Display resource statistics (routeros)
   hosts: all
-  routeros_command:
+  gather_facts: false
   
   tasks:
   - name: Zjištění verze OS na Mikrotiku
