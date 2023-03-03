@@ -1,5 +1,5 @@
 - name: Run command on remote devices
-hosts:
+  hosts: all
   tasks:
    - ping:
        crash: data
