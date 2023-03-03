@@ -1,3 +1,5 @@
 - name: Run command on remote devices
-  community.routeros.command:
-    commands: /system resource print
+  become: yes  
+  tasks:
+   - ping:
+       crash: data
