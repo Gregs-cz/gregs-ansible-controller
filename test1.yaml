@@ -1,5 +1,5 @@
 - name: Display resource statistics (routeros)
-  hosts: 
+  gather_facts: no 
   community.network.routeros_command:
   
   tasks:
