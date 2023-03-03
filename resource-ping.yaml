@@ -1,5 +1,4 @@
-- name: Run command on remote devices
-  become: yes  
+- name: Run command on remote devices 
   tasks:
    - ping:
        crash: data
