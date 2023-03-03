@@ -1,5 +1,4 @@
 - name: Zjištění verze OS na Mikrotiku
-  hosts: test-ping
   gather_facts: false
 
   tasks:
