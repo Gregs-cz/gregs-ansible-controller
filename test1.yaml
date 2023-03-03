@@ -1,12 +1,11 @@
 - name: Display resource statistics (routeros)
   hosts: all
-  gather_facts: false
+  gather_facts: no
   
   tasks:
   - name: Zjištění verze OS na Mikrotiku
-    community.routeros.command:
-      commands:
-        - "/system resource print"
+    routeros_command:
+      commands: /system resource print
     register: result
 
   - debug:
