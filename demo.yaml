@@ -1,0 +1,13 @@
+---
+- name: Zobrazit procesy na serveru
+  hosts: localhost 
+  gather_facts: false  
+  
+  tasks:
+  - name: Show process
+    shell: ps aux
+    register: running_processes
+    
+  - name: 
+    debug:
+      var: running_processes.stdout_lines
