@@ -1,6 +1,10 @@
 - name: Zjištění verze OS na Mikrotiku
-  gather_facts: false
+  connection: network_cli
+  gather_facts: no
 
+  vars:
+   ansible_network_os: routeros
+   
   tasks:
   - name: Zjištění verze OS na Mikrotiku
     mikrotik_command:
