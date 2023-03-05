@@ -1,5 +1,6 @@
 ---
 - name: Test SSH připojení
+  hosts: all
   gather_facts: false
   tasks:
     - name: Otestovat dostupnost hostu
