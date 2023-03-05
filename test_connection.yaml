@@ -1,0 +1,8 @@
+---
+- name: Test SSH připojení
+  hosts: testserver
+  gather_facts: false
+  tasks:
+    - name: Otestovat SSH připojení
+      wait_for_connection:
+        connect_timeout: 5
