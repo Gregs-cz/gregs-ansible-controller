@@ -1,6 +1,6 @@
 ---
 - name: Test SSH připojení
-  hosts: iris
+  hosts: google.com
   gather_facts: false
   tasks:
     - name: Otestovat dostupnost hostu
