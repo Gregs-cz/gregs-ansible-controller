@@ -1,6 +1,6 @@
 ---
 - name: Test SSH připojení
-  hosts: testserver
+  hosts: iris
   gather_facts: false
   tasks:
     - name: Otestovat SSH připojení
