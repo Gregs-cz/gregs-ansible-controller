@@ -3,6 +3,5 @@
   hosts: iris
   gather_facts: false
   tasks:
-    - name: Otestovat SSH připojení
-      wait_for_connection:
-        connect_timeout: 5
+    - name: Otestovat dostupnost hostu
+      ping:
