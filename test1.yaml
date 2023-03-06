@@ -3,12 +3,7 @@
   hosts: all
   connection: network_cli
   gather_facts: no
-  
-  vars:
-   ansible_network_os: routeros
-   ansible_user: admin
-   ansible_password: Gr3gs...
-  
+
   tasks:
     - name: test add DNS
       routeros_command:
