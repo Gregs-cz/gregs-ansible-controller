@@ -2,7 +2,7 @@
 - name: Test SSH připojení
   hosts: all
   connection: network_cli
-  gather_facts: false
+  gather_facts: no
   
   vars:
    ansible_network_os: routeros
