@@ -4,13 +4,13 @@
   gather_facts: no
    
   tasks:
-    - name: Check 
+    - name: Get Mikrotik resource
       routeros_command:
         commands:
-        - /system resource print
-        register: mikrotik_resource_output
+          - /system resource print
+      register: mikrotik_resource_output
 
     - name: Display Mikrotik resource
-        debug:
+      debug:
         var: mikrotik_resource_output.stdout_lines
 
