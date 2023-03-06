@@ -1,0 +1,11 @@
+- name: Check Mikrotik RouterOS Version
+  hosts: all
+  connection: network_cli
+  gather_facts: no
+   
+  tasks:
+    - name: Check 
+      routeros_command:
+        commands:
+        - /system resource print
+
