@@ -1,12 +1,15 @@
-- name: Display resource statistics (routeros)
+---
+- name: Test SSH připojení
   hosts: all
-  gather_facts: no
+  connection: network_cli
+  gather_facts: false
+  
+  vars:
+   ansible_network_os: routeros
+   ansible_user: admin
   
   tasks:
-  - name: Zjištění verze OS na Mikrotiku
-    routeros_command:
-      commands: /system resource print
-    register: result
-
-  - debug:
-      var: result.stdout_lines
+    - name: test add DNS
+      routeros_command:
+        commands:
+        - /ip dns set servers=8.8.8.8,1.1.1.1
