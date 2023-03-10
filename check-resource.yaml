@@ -1,5 +1,5 @@
 - name: Check Mikrotik RouterOS Version
-  hosts: all
+  hosts: gregs-iris-credntial
   connection: network_cli
   gather_facts: no
    
